@@ -160,7 +160,7 @@ main();
   },
   {
     question: `
-7. What is the output of the following code considering the microtask and macrotask queue?
+7. What is the output?
 \`\`\`js
 async function f() {
   console.log('start');
@@ -210,7 +210,7 @@ chain();
   },
   {
     question: `
-9. What will be the output if an async function is executed multiple times with overlapping promises?
+9. What is the output?
 \`\`\`js
 async function overlap() {
   const result = await Promise.race([
@@ -235,7 +235,7 @@ overlap();
   },
   {
     question: `
-10. What will be the output of the following code considering error handling in async functions?
+10. What is the output?
 \`\`\`js
 async function foo() {
   throw new Error('Error in foo');
@@ -264,7 +264,7 @@ bar().catch(e => console.log('Caught in catch:', e.message));
   },
   {
     question: `
-11. How does the following code demonstrate the behavior of Promise.all with mixed resolved and rejected promises?
+11. . What is the output?
 \`\`\`js
 async function mixedPromises() {
   const p1 = Promise.resolve('Resolved 1');
