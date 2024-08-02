@@ -92,10 +92,10 @@ const myPromise = Promise.resolve("Woah some cool data");
 \`\`\`
 `,
     answers: [
-      "a. Woah some cool data On finally!",
-      "b. Oops didn't work On finally!!",
+      "a. Woah some cool data Oh finally!",
+      "b. Oops didn't work Oh finally!!",
       "c. Oh finally",
-      "d. On finally! Oops didn't work",
+      "d. Oh finally! Oops didn't work",
     ],
     correct: 0,
     explanation: `The output is 'Woah some cool data Oh finally!'. The \`await myPromise\` resolves immediately with 'Woah some cool data' which is logged to the console.\n\nThe \`finally\` block executes regardless of whether the \`try\` block succeeds or fails, logging 'Oh finally!'. Therefore, 'Woah some cool data' and 'Oh finally!' are logged in sequence.`,
@@ -126,7 +126,7 @@ a().then(() => console.log('Done'));
       "d. Done",
     ],
     correct: 0,
-    explanation: `The function \`a()\` calls \`b()\`, which throws an error. The error is caught in the \`catch\` block, and 'Error: Something went wrong' is logged. After the error is handled, 'Done' is logged from the \`then\` block of the Promise returned by \`a()\`.`,
+    explanation: `The function \`a()\` calls \`b()\`, which throws an error. This error is caught in the \`catch\` block, and 'Error: Something went wrong' is logged. However, because the error is not re-thrown, \`a()\` is considered resolved successfully. Therefore, 'Done' is logged after the error handling.`,
   },
   {
     question: `
